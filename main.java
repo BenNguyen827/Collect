@@ -1,18 +1,32 @@
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Set;
 import java.util.TreeMap;
+import java.util.List;
+
 
 public class main{
 	
 	public main(String[] args) {
 		
-		List words = new List();
+		
+		int count = 0;
+		List<String> words = Arrays.asList("1", "2", "3");		
 		Set<String> targetSet = null;		
+		for (String t : words) { 
+			for (String a : words) { 
+				
+	           if(a == t)
+	        	   count++;
+	            
+			}
+			if (count ==1) {
+			 targetSet.add(t);
+			}
+		}
 		
 		
-		targetSet.add("sup1");
-		targetSet.add("sup2");
-		targetSet.add("sup3");
+		
 		
 HashMap<String,Integer> hash = new HashMap<String,Integer>();
  hash.put("Hello",1 );
